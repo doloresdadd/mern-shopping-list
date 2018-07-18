@@ -1,4 +1,5 @@
-import { GET_ITEM, GET_ITEMS, ADD_ITEM, UPDATE_ITEM, DELETE_ITEM } from './types'
+import { GET_ITEM, GET_ITEMS, ADD_ITEM, UPDATE_ITEM, DELETE_ITEM, ITEMS_LOADING } from './types'
+import { isRegExp } from 'util';
 
 export const getItems = () => {
     return {
@@ -6,15 +7,30 @@ export const getItems = () => {
     }
 }
 
-export const addItem = () => {
+export const addItem = (item) => {
     return {
-        type: ADD_ITEM
+        type: ADD_ITEM,
+        payload: item
     }
 }
 
-export const updateItem = () => {
+export const getItem = (item) => {
     return {
-        type: UPDATE_ITEM
+        type: GET_ITEM,
+        payload: item
+    }
+}
+
+export const updateItem = (item, id) => {
+    return {
+        type: UPDATE_ITEM,
+        payload: item
+    }
+}
+
+export const setItemsLoading = () => {
+    return {
+        type: ITEMS_LOADING
     }
 }
 
