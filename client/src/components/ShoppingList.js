@@ -85,12 +85,12 @@ class ShoppingList extends Component {
                 {items.map(({ id, name}) => (
                     <CSSTransition key={id} timeout={500} classNames="fade">
                         <ListGroupItem>
-                            <Button 
+                            {/* <Button 
                             color="info"
                             className="edit-btn"
                             size="sm"
                             onClick={this.editItem.bind(this, id)}
-                            ><FontAwesomeIcon icon="edit" /></Button> &nbsp;
+                            ><FontAwesomeIcon icon="edit" /></Button> &nbsp; */}
                             
                             <Button
                              color="danger"
